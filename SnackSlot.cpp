@@ -1,4 +1,4 @@
-#include "SnackSlot.h"
+ï»¿#include "SnackSlot.h"
 #include <iostream>
 
 SnackSlot::SnackSlot(int size)
@@ -21,7 +21,7 @@ int SnackSlot::addSnack(Snack * snack)
 		return 0;
 	} 
 	else {
-		std::cout << "Íåëüçÿ äîáàâèòü ñíåê. Ñëîò óæå ïîëîí\n";
+		std::cout << "ÐÐµÐ»ÑŒÐ·Ñ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ½ÐµÐº. Ð¡Ð»Ð¾Ñ‚ ÑƒÐ¶Ðµ Ð¿Ð¾Ð»Ð¾Ð½\n";
 		return 1;
 	}
 }
@@ -35,7 +35,7 @@ Snack *SnackSlot::popSnack()
 		return lastSnack;
 	}
 	else {
-		std::cout << "Íåëüçÿ ïîëó÷èòü ñíåê. Ñëîò ïóñò\n";
+		std::cout << "ÐÐµÐ»ÑŒÐ·Ñ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ ÑÐ½ÐµÐº. Ð¡Ð»Ð¾Ñ‚ Ð¿ÑƒÑÑ‚\n";
 		return nullptr;
 	}
 }
@@ -57,7 +57,7 @@ int SnackSlot::getSnacksCount()
 
 void SnackSlot::printSlot()
 {
-	std::cout << "Ñëîò:";
+	std::cout << "Ð¡Ð»Ð¾Ñ‚:";
 	for (int i = 0; i < snackCount; i++)
 	{
 		std::cout << " " << getSnackName(i);

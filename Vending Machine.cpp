@@ -1,29 +1,29 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "Snack.h"
 #include "SnackSlot.h"
 #include "VendingMachine.h"
 int main() {
 	setlocale(LC_ALL, "");
 
-	//Функционал по заданию:
+	//Р¤СѓРЅРєС†РёРѕРЅР°Р» РїРѕ Р·Р°РґР°РЅРёСЋ:
 	Snack *bounty = new Snack("Bounty");
 	Snack *snickers = new Snack("Snickers");
-	SnackSlot *slot = new SnackSlot(10/*количество батончиков, которые помещаются в слот*/);
-	slot->addSnack(bounty); //Добавляем батончик в слот
+	SnackSlot *slot = new SnackSlot(10/*РєРѕР»РёС‡РµСЃС‚РІРѕ Р±Р°С‚РѕРЅС‡РёРєРѕРІ, РєРѕС‚РѕСЂС‹Рµ РїРѕРјРµС‰Р°СЋС‚СЃСЏ РІ СЃР»РѕС‚*/);
+	slot->addSnack(bounty); //Р”РѕР±Р°РІР»СЏРµРј Р±Р°С‚РѕРЅС‡РёРє РІ СЃР»РѕС‚
 	slot->addSnack(snickers);
-	VendingMachine* machine = new VendingMachine(12 /*Количество слотов для снеков*/);
-	machine->addSlot(slot); // Помещаем слот обратно в аппарат
+	VendingMachine* machine = new VendingMachine(12 /*РљРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ РґР»СЏ СЃРЅРµРєРѕРІ*/);
+	machine->addSlot(slot); // РџРѕРјРµС‰Р°РµРј СЃР»РѕС‚ РѕР±СЂР°С‚РЅРѕ РІ Р°РїРїР°СЂР°С‚
 
-	std::cout << machine->getEmptySlotsCount() << std::endl; // Должно выводить количество пустых слотов для снеков
+	std::cout << machine->getEmptySlotsCount() << std::endl; // Р”РѕР»Р¶РЅРѕ РІС‹РІРѕРґРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСѓСЃС‚С‹С… СЃР»РѕС‚РѕРІ РґР»СЏ СЃРЅРµРєРѕРІ
 
-	//Дополнительный функционал
+	//Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ С„СѓРЅРєС†РёРѕРЅР°Р»
 	slot->printSlot();
 	Snack *mars = new Snack("Mars");
 	Snack *picnic = new Snack("Picnic");
 	SnackSlot *slot2 = new SnackSlot(10);
 	SnackSlot *slot3 = new SnackSlot(1);
 	slot3->addSnack(mars);
-	slot3->addSnack(picnic); // ошибка, слот полон
+	slot3->addSnack(picnic); // РѕС€РёР±РєР°, СЃР»РѕС‚ РїРѕР»РѕРЅ
 	machine->addSlot(slot2);
 	machine->addSlot(slot3);
 	machine->printMachine();

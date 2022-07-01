@@ -1,5 +1,6 @@
 #include "SnackSlot.h"
 #include <iostream>
+
 SnackSlot::SnackSlot(int size)
 {
 	this->size = size;

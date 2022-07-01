@@ -1,5 +1,5 @@
 #include "VendingMachine.h"
-
+ 
 VendingMachine::VendingMachine(int size)
 {
 	this->size = size;

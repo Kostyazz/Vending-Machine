@@ -4,6 +4,7 @@
 #include "VendingMachine.h"
 int main() {
 	setlocale(LC_ALL, "");
+
 	//Функционал по заданию:
 	Snack *bounty = new Snack("Bounty");
 	Snack *snickers = new Snack("Snickers");

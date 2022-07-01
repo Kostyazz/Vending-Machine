@@ -1,4 +1,4 @@
-#include "VendingMachine.h"
+ï»¿#include "VendingMachine.h"
  
 VendingMachine::VendingMachine(int size)
 {
@@ -20,7 +20,7 @@ int VendingMachine::addSlot(SnackSlot *slot)
 		return 0;
 	}
 	else {
-		std::cout << "Íåëüçÿ äîáàâèòü ñëîò. Ìàøèíà ïîëíà\n";
+		std::cout << "ÐÐµÐ»ÑŒÐ·Ñ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»Ð¾Ñ‚. ÐœÐ°ÑˆÐ¸Ð½Ð° Ð¿Ð¾Ð»Ð½Ð°\n";
 		return 1;
 	}
 }
@@ -32,7 +32,7 @@ int VendingMachine::getEmptySlotsCount()
 
 void VendingMachine::printMachine()
 {
-	std::cout << "Ìàøèíà:" << std::endl;
+	std::cout << "ÐœÐ°ÑˆÐ¸Ð½Ð°:" << std::endl;
 	for (int i = 0; i < slotCount; i++)
 	{
 		slotList[i]->printSlot();
